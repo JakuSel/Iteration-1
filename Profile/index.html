@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Personal WebSite</title>
+  </head>
+  
+  <body onload="openInfo(event, 'About');">
+<div class="box">
+     <div id="circle_img">        
+     </div>
+  <img src="CSS/prof_pic.jpg" alt="" class="box-img">
+  <h1>JS</h1>
+<h5>
+
+<div class="tab">
+  <button class="tablinks" onclick="openInfo(event, 'About')">About Me</button>
+  <button class="tablinks" onclick="openInfo(event, 'Skills')">Skills</button>
+  <button class="tablinks" onclick="openInfo(event, 'Hobbies')">Hobbies</button>
+  <button class="tablinks" onclick="openInfo(event, 'Contact')">Contacts</button>
+</div>
+
+<div id="About" class="tabcontent">
+  <p><b>Dear visitor,</b><br><br> you came here, so let me introduce myself...<br> ... my name is Jakub Seliga and i'm currently studying software development </p>
+  
+</div>
+
+<div id="Skills" class="tabcontent">
+  IT Skills:
+     <ul>
+      <li>C/ C#</li>
+      <li>HTML/ CSS/ JavaScript</li>
+      <li>Network</li>
+      <li>Operating systems</li>
+  </ul><br>
+  Other Skills:
+     <ul>
+      <li>Process Improvment</li>
+      <li>Managment</li>
+      <li>Project Scheduling</li>
+      <li>Strategic Planning</li>
+  </ul>
+</div>
+
+<div id="Hobbies" class="tabcontent">
+  <ul>
+      <li>Sports – Walking, Running, Bicycling, Swimming, Team Sports</li>
+      <li>Music – Playing, Listening</li>
+      <li>Computer</li>
+      <li>TeamBuilding</li>
+  </ul>
+</div> 
+<div id="Contact" class="tabcontent">
+  <table>
+      <tr>
+          <td>Contact Name:</td>
+          <td>Jakub Seliga</td>
+      </tr>
+      <tr>
+          <td>Adress:</td>
+          <td>Košice 1</td>
+      </tr>
+      <tr>
+          <td>Postal Code:</td>
+          <td>04001</td>
+      </tr>
+      <tr>
+          <td>Phone:</td>
+          <td>+421 987 654 321</td>
+      </tr>
+      <tr>
+          <td>E-mail:</td>
+          <td>jakub@mail.net</td>
+      </tr>      
+  </table>
+</div>
+</h5>
+
+<ul>
+    <li><a href="https://www.facebook.com/jakubko.seliga" class="fa fa-facebook"></a></li>
+    <li><a href="https://twitter.com/CptJacobo"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+    <li><a href="www.gmail.com"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+</ul>
+</div>
+
+<script>
+function openInfo(evt, perInfo) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(perInfo).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+</body>
+</html>
+
